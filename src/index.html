@@ -35,7 +35,7 @@
 
   <main>
     <!--  секция Hero-->
-    <section class="hero" id="hero">
+    <section class="section hero" id="hero">
       <div class="container">
         <div class="hero__content">
           <h1 class="title hero__title">Курс алготрейдинга</h1>
@@ -54,6 +54,80 @@
         </div>
       </div>
     </section>
+    <!--    секция Why-->
+    <section class="section why">
+      <div class="container">
+        <h2 class="why__heading">Почему робот?</h2>
+        <div class="why__wrap">
+          <div class="why__col">
+
+            <div class="percent">
+              <span class="why__number">95</span>
+              <span class="why__percent">%</span>
+            </div>
+            <h3 class="why__title">Увеличение прибыли <br> на финансовых рынках</h3>
+            <p class="why__description why__description--first">Отсутствие эмоций у робота позволяет в разы увеличить эффективность</p>
+          </div>
+          <div class="why__col">
+            <img src="img/why/why-icon1.png" alt="icon" class="why__icon">
+            <h3 class="why__title">Глубокий <span class="why__title--small">анализ<br> и скорость</span></h3>
+            <p class="why__description">Полноценный анализ финансовых инструментов по разработанным математическим алгоритмам
+              <br> за доли секунд</p>
+          </div>
+          <div class="why__col">
+            <img src="img/why/why-icon2.png" alt="icon" class="why__icon">
+            <h3 class="why__title">Максимальный <br> <span class="why__title--small">инструментарий</span></h3>
+            <p class="why__description">Отслеживайте тысячи финансовых инструментов каждую секунду <br> с минимальными рисками</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--    секия Calc-->
+    <div class="section section calc">
+      <div class="container calc__container">
+        <h2 class="calc__heading">Создайте своего <br> авторского торгового робота</h2>
+        <p class="calc__text">
+          получайте прибыль даже с нулевыми знаниями в сфере алгоритмической торговли
+        </p>
+        <div class="calc__wrap">
+          <div class="calc__block">
+            <h3 class="calc__title">Сколько бы Вы заработали<span class="calc__title--small">, используя торгового робота</span></h3>
+            <p class="calc__subtitle">Просто введите данные и сравните результаты </p>
+          </div>
+          <form action="send.php" method="POST" class="form calc__form">
+            <div class="form__line">
+              <div class="input-group calc__input-group">
+                <input type="text" class="input form__input calc__input input--light" id="calcFirst__argument"
+                       name="userName"
+                       placeholder="0">
+                <label for="calcFirst__argument" class="label form__label label--light">Количество инструментов, по которым Вы торгуете</label>
+              </div>
+              <div class="input-group calc__input-group">
+                <input type="text" class="input form__input calc__input input--light" id="calcSecond__argument"
+                       name="userName"
+                       placeholder="16">
+                <label for="calcSecond__argument" class="label form__label label--light">Средняя месячная прибыль(%)</label>
+              </div>
+            </div>
+            <div class="form__line">
+              <div class="input-group calc__input-group">
+                <input type="text" class="input form__input calc__input input--light" id="calcThird__argument"
+                       name="userName"
+                       placeholder="2">
+                <label for="calcThird__argument" class="label form__label label--light">Количество инструментов Вашего брокера</label>
+              </div>
+              <div class="input-group calc__input-group">
+                <input type="text" class="input form__input calc__input input--light" id="calcFourth__argument"
+                       name="userName"
+                       placeholder="5 000">
+                <label for="calcFourth__argument" class="label form__label label--light">Сумма депозита ($)</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <button class="button button--primary calc__button">Просчитать прибыль на 2016 год</button>
+      </div>
+    </div>
   </main>
 
 
