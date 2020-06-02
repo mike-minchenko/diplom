@@ -64,6 +64,25 @@
       width: 55%
     &__wrap
       justify-content: space-around
+  .format
+    &__line
+      &--first
+        flex-direction: column
+        align-items: center
+      &--second
+        flex-wrap: wrap
+        max-width: 555px
+        margin: auto
+      &--second
+        flex-wrap: wrap
+    &__block
+      &--first
+        margin-right: 0
+    &-item
+      width: 50%
+      margin-bottom: 30px
+
+
 
 @media screen and ( max-width: 910px )
   .why
@@ -150,6 +169,20 @@
       height: 280px
     &__button
       line-height: 1.4
+  .format
+    &__line
+      &--second
+        flex-wrap: wrap
+        max-width: 100%
+        flex-direction: column
+    &__block
+      height: 294px
+    &-item
+      width: 100%
+      margin-bottom: 30px
+
+
+
 @media screen and ( max-width: 375px )
   .calc
     &__button
@@ -160,6 +193,13 @@
   .example
     &__video-wrap
       height: 210px
+  .format
+    &__block
+      padding-left: 2.3rem
+      margin-bottom: 33px
+    &-item
+      &__img
+        margin-bottom: 17px
 
 
 
