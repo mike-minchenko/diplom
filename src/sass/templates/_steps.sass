@@ -1,0 +1,42 @@
+.steps
+  padding-bottom: 5rem
+  text-align: center
+  &__heading
+    color: $dark
+    font-size: 3.6rem
+    font-weight: 300
+    margin-bottom: 23px
+    &:before
+      content: ''
+      display: flex
+      background-color: #eaf1f7
+      width: 1px
+      height: 72px
+      margin: 0 auto 3.5rem
+  &__text
+    color: #061826
+    font-size: 1.6rem
+    font-weight: 300
+    line-height: 2.4rem
+    &:after
+      content: ''
+      display: flex
+      background-color: #eaf1f7
+      width: 1px
+      height: 47px
+      margin: 1.8rem auto 2.7rem
+  &__description
+    display: block
+    color: $dark
+    font-size: 2.4rem
+    font-weight: 300
+    &:after
+      content: ''
+      display: flex
+      background: url('../img/steps/arrow.svg') no-repeat center center
+      width: 5px
+      height: 47px
+      margin: 1.8rem auto 2.7rem
+    &:nth-child(7)
+      &:after
+        display: none
