@@ -746,8 +746,11 @@ a {
   .example__button {
     max-width: 554px;
     width: 100%; }
-  .example .video-wrap__play {
-    cursor: pointer; }
+
+.video-wrap__play {
+  cursor: pointer;
+  width: 6.8%;
+  border-radius: 50%; }
 
 @media screen and (max-width: 1200px) {
   html {
@@ -780,7 +783,11 @@ a {
   .button--light {
     transition: box-shadow 0.3s; }
     .button--light:hover {
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5) inset; } }
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5) inset; }
+  .video-wrap__play {
+    transition: box-shadow 0.3s; }
+    .video-wrap__play:hover {
+      box-shadow: 0 0 20px rgba(8, 66, 183, 0.5) inset; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -869,10 +876,16 @@ a {
   .calc__form {
     width: 100%; }
   .start__heading {
-    font-size: 1.9rem; } }
+    font-size: 1.9rem; }
+  .example__video-wrap {
+    height: 280px; }
+  .example__button {
+    line-height: 1.4; } }
 
 @media screen and (max-width: 375px) {
   .calc__button {
     padding: 13.5px 20px; }
   .start__button {
-    width: 100%; } }
+    width: 100%; }
+  .example__video-wrap {
+    height: 210px; } }
