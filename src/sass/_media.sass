@@ -36,11 +36,27 @@
       transition: box-shadow 0.3s
       &:hover
         box-shadow: 0 0 20px rgba($light, 0.5) inset
+  .hero
+    &__description
+      &--secondary
+        transition: color 0.3s
+        &:hover
+          color: rgba($secondary, 0.5)
+  .text
+    &--secondary
+      transition: color 0.3s
+      &:hover
+        color: rgba($secondary, 0.7)
   .video-wrap
     &__play
       transition: box-shadow 0.3s
       &:hover
         box-shadow: 0 0 20px rgba($primary, 0.5) inset
+  .format
+    &__block
+      transition: box-shadow 0.3s
+      &:hover
+        box-shadow: 3px 2px 16px 2px rgba($primary, 0.4)
 @media screen and ( max-width: 992px )
   .nav
     display: none
@@ -189,7 +205,13 @@
   .process
     &-item
       width: 45%
-
+  .benefit
+    &-about
+      visibility: hidden
+  .benefit__slide .slick-arrow.slick-prev
+    visibility: hidden
+  .benefit__slide .slick-arrow.slick-next
+    visibility: hidden
 
 
 @media screen and ( max-width: 375px )

@@ -16,4 +16,17 @@ $(document).ready(function() {
     function videoPlay(event) {
         event.target.playVideo();
     }
+//    слайдер
+    $('.benefit__slide').slick({
+        asNavFor: ".benefit-about--left, .benefit-about--right"
+    });
+    $('.benefit-about--left').slick({
+        arrows: false,
+        fade:true
+    });
+    $('.benefit-about--right').slick({
+        arrows: false,
+        fade:true
+    })
+
 });
