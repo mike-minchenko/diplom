@@ -753,8 +753,10 @@ a {
   border-radius: 50%; }
 
 .format {
-  padding-top: 11.2rem;
-  padding-bottom: 5rem; }
+  padding-top: 11.2rem; }
+  .format__container {
+    padding-bottom: 11.6rem;
+    border-bottom: 1px solid #eaf1f7; }
   .format__heading {
     color: #0f1c2e;
     font-size: 3.6rem;
@@ -807,6 +809,40 @@ a {
       font-size: 1.6rem;
       font-weight: 300;
       line-height: 2.4rem; }
+
+.process {
+  padding-top: 10rem;
+  padding-bottom: 11.6rem;
+  background: linear-gradient(171.9deg, #fff 39.5%, #eaf1f7 34%); }
+  .process__heading {
+    color: #000000;
+    font-size: 3.6rem;
+    font-weight: 300;
+    line-height: 4.2rem;
+    max-width: 46.5rem;
+    margin-bottom: 10.4rem; }
+  .process__line {
+    display: flex;
+    justify-content: space-between; }
+
+.process-item {
+  width: 23%; }
+  .process-item__title {
+    color: #000000;
+    font-size: 3.7rem;
+    font-weight: 700;
+    margin-bottom: 2.8rem; }
+  .process-item__subtitle {
+    color: #0f1c2e;
+    font-size: 2.4rem;
+    font-weight: 300;
+    margin-bottom: 2.6rem; }
+  .process-item__description {
+    color: #061826;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.4rem;
+    max-width: 197px; }
 
 @media screen and (max-width: 1200px) {
   html {
@@ -871,12 +907,17 @@ a {
     flex-wrap: wrap;
     max-width: 555px;
     margin: auto; }
-  .format__line--second {
-    flex-wrap: wrap; }
   .format__block--first {
     margin-right: 0; }
   .format-item {
     width: 50%;
+    margin-bottom: 30px; }
+  .process__line {
+    flex-wrap: wrap;
+    max-width: 555px;
+    margin: auto; }
+  .process-item {
+    width: 40%;
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 910px) {
@@ -951,6 +992,8 @@ a {
     height: 280px; }
   .example__button {
     line-height: 1.4; }
+  .format__container {
+    padding-bottom: 5rem; }
   .format__line--second {
     flex-wrap: wrap;
     max-width: 100%;
@@ -959,7 +1002,9 @@ a {
     height: 294px; }
   .format-item {
     width: 100%;
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .process-item {
+    width: 45%; } }
 
 @media screen and (max-width: 375px) {
   .calc__button {
@@ -972,4 +1017,15 @@ a {
     padding-left: 2.3rem;
     margin-bottom: 33px; }
   .format-item__img {
-    margin-bottom: 17px; } }
+    margin-bottom: 17px; }
+  .process {
+    padding-top: 6rem;
+    padding-bottom: 5rem; }
+    .process__line {
+      flex-direction: column; }
+    .process__heading {
+      margin-bottom: 6rem; }
+    .process-item__title {
+      margin-bottom: 2rem; }
+    .process-item__subtitle {
+      margin-bottom: 1.7rem; } }
