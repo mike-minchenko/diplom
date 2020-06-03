@@ -362,6 +362,35 @@
         </div>
       </div>
     </section>
+    <!--    секция  Lessons-->
+    <section class="section lessons">
+
+      <div class="container">
+        <h2 class="lessons__heading">Получите первые видеоуроки совершенно бесплатно уже сейчас!</h2>
+        <p class="lessons__text">Просто внесите Ваши данные в форму прямо&nbsp;сейчас, <br> и мы сразу Вам вышлем подборку первых видеоуроков. Убедитесь сами!</p>
+
+        <form action="send.php" method="POST" class="form lessons__form">
+
+          <div class="input-group lessons__input-group">
+            <label for="lessonsUser-name"></label>
+            <input type="text" class="input form__input lessons__input " name="userName" id="lessonsUser-name" placeholder="Имя">
+          </div>
+
+          <div class="input-group lessons__input-group">
+            <label for="lessonsUser-phone"></label>
+            <input type="tel" class="input form__input lessons__input " name="userPhone" id="lessonsUser-phone" placeholder="Телефон">
+          </div>
+
+          <div class="input-group lessons__input-group lessons__user-email">
+            <label for="lessonsUser-email"></label>
+            <input type="email" class="input form__input lessons__input " name="userEmail" id="lessonsUser-email" placeholder="Email">
+          </div>
+
+          <button class="button button--primary lessons__button">начать обучение</button>
+        </form>
+      </div>
+
+    </section>
 
   </main>
 
