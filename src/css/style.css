@@ -1084,6 +1084,45 @@ a {
     width: 100%;
     padding: 15.4px 18px; }
 
+.results {
+  padding-top: 12.4rem;
+  padding-bottom: 11.6rem;
+  background: url("../img/results/bg-img.png") no-repeat bottom left; }
+  .results__heading {
+    color: #000000;
+    font-size: 3.6rem;
+    font-weight: 300;
+    margin-bottom: 2.6rem; }
+  .results__text {
+    color: #061826;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.4rem;
+    max-width: 25rem; }
+  .results__line {
+    display: flex;
+    justify-content: space-between; }
+  .results__col {
+    width: 27.4%; }
+    .results__col:nth-child(1) {
+      width: 32.4%; }
+  .results__img {
+    display: block;
+    max-width: 258px;
+    margin-bottom: 4rem; }
+  .results__title {
+    color: #0f1c2e;
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 2.88rem;
+    margin-bottom: 2.5rem; }
+  .results__description {
+    max-width: 26.3rem;
+    color: #061826;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.4rem; }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 8px; }
@@ -1131,6 +1170,10 @@ a {
   .format__block {
     transition: box-shadow 0.3s; }
     .format__block:hover {
+      box-shadow: 3px 2px 16px 2px rgba(8, 66, 183, 0.4); }
+  .results__img {
+    transition: box-shadow 0.3s; }
+    .results__img:hover {
       box-shadow: 3px 2px 16px 2px rgba(8, 66, 183, 0.4); } }
 
 @media screen and (max-width: 992px) {
@@ -1176,7 +1219,21 @@ a {
     flex-wrap: wrap; }
   .advantages__item {
     width: 50%;
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .results {
+    padding-top: 6rem;
+    padding-bottom: 6rem; }
+    .results__line {
+      flex-direction: column;
+      align-items: center; }
+    .results__col {
+      width: 44%;
+      margin-bottom: 50px; }
+      .results__col:nth-child(1) {
+        width: 44%;
+        margin-bottom: 70px; }
+    .results__img {
+      margin-bottom: 2.5rem; } }
 
 @media screen and (max-width: 910px) {
   .why img {
@@ -1221,7 +1278,11 @@ a {
     border-left: 1px solid #eaf1f7;
     margin-bottom: 50px; }
     .price__card:nth-child(5) {
-      margin: 0; } }
+      margin: 0; }
+  .results__col {
+    width: 54%; }
+    .results__col:nth-child(1) {
+      width: 54%; } }
 
 @media screen and (max-width: 576px) {
   .menu__logo-text {
@@ -1297,7 +1358,11 @@ a {
     width: 75%; }
   .lessons {
     padding-top: 6rem;
-    padding-bottom: 6rem; } }
+    padding-bottom: 6rem; }
+  .results__col {
+    width: 100%; }
+    .results__col:nth-child(1) {
+      width: 100%; } }
 
 @media screen and (max-width: 375px) {
   .calc__button {
