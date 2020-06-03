@@ -753,7 +753,7 @@ a {
 .benefit__slide .slick-arrow {
   position: absolute;
   top: 62%;
-  margin: -30px 0 0 0;
+  margin: -30px 0px 0px 0px;
   z-index: 10;
   font-size: 0;
   width: 52px;
@@ -948,6 +948,104 @@ a {
     line-height: 2.4rem;
     max-width: 197px; }
 
+.advantages {
+  padding-top: 11.6rem;
+  padding-bottom: 11.6rem;
+  background-color: #eaf1f7;
+  text-align: center; }
+  .advantages__heading {
+    color: #0f1c2e;
+    font-size: 3.6rem;
+    font-weight: 300;
+    margin-bottom: 5.4rem; }
+  .advantages__subheading {
+    display: block;
+    color: #0f1c2e;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 3rem; }
+  .advantages__line {
+    display: flex;
+    justify-content: space-between; }
+    .advantages__line--first {
+      margin-bottom: 5.6rem; }
+  .advantages__item {
+    width: 31%; }
+  .advantages__icon {
+    display: inline-block;
+    margin-bottom: 13px; }
+  .advantages__title {
+    color: #061826;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.4rem; }
+  .advantages__subtitle {
+    color: #061826;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.4rem;
+    max-width: 32.5rem;
+    margin: auto; }
+
+.price {
+  padding-bottom: 5rem;
+  text-align: center; }
+  .price__heading {
+    color: #0f1c2e;
+    font-size: 3.6rem;
+    font-weight: 300;
+    margin-bottom: 2.4rem; }
+    .price__heading:before {
+      content: '';
+      display: flex;
+      background-color: #eaf1f7;
+      width: 1px;
+      height: 72px;
+      margin: 0 auto 3.5rem; }
+  .price__text {
+    color: #061826;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.4rem;
+    max-width: 35.8rem;
+    margin: auto;
+    margin-bottom: 6.6rem; }
+  .price__line {
+    display: flex;
+    justify-content: space-between; }
+  .price__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 31.6%; }
+  .price__title {
+    color: #000000;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2rem; }
+  .price__tag {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 3.8rem; }
+  .price__description {
+    margin-left: 0;
+    padding-left: 0;
+    color: #061826;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 4.1rem; }
+    .price__description li {
+      list-style-type: none;
+      margin-bottom: 2rem;
+      line-height: 2.4rem; }
+  .price__button {
+    margin-top: auto;
+    max-width: 166px;
+    width: 100%; }
+  .price__border {
+    width: 1px;
+    background-color: #eaf1f7; }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 8px; }
@@ -1034,6 +1132,12 @@ a {
     margin: auto; }
   .process-item {
     width: 40%;
+    margin-bottom: 30px; }
+  .advantages__line {
+    justify-content: center;
+    flex-wrap: wrap; }
+  .advantages__item {
+    width: 50%;
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 910px) {
@@ -1067,7 +1171,19 @@ a {
   .hero__subtitle {
     font-size: 2.3rem; }
   .hero__description {
-    max-width: 29.8rem; } }
+    max-width: 29.8rem; }
+  .price__line {
+    flex-direction: column;
+    align-items: center; }
+  .price__border {
+    display: none; }
+  .price__card {
+    width: 50%;
+    border-right: 1px solid #eaf1f7;
+    border-left: 1px solid #eaf1f7;
+    margin-bottom: 50px; }
+    .price__card:nth-child(5) {
+      margin: 0; } }
 
 @media screen and (max-width: 576px) {
   .menu__logo-text {
@@ -1126,7 +1242,21 @@ a {
   .benefit__slide .slick-arrow.slick-prev {
     visibility: hidden; }
   .benefit__slide .slick-arrow.slick-next {
-    visibility: hidden; } }
+    visibility: hidden; }
+  .advantages {
+    padding-top: 5rem;
+    padding-bottom: 5rem; }
+    .advantages__line {
+      flex-direction: column;
+      align-items: center; }
+    .advantages__item {
+      width: 100%; }
+    .advantages__heading {
+      margin-bottom: 3.4rem; }
+    .advantages__subheading {
+      margin-bottom: 5.4rem; }
+  .price__card {
+    width: 75%; } }
 
 @media screen and (max-width: 375px) {
   .calc__button {
@@ -1150,4 +1280,6 @@ a {
     .process-item__title {
       margin-bottom: 2rem; }
     .process-item__subtitle {
-      margin-bottom: 1.7rem; } }
+      margin-bottom: 1.7rem; }
+  .price__card {
+    width: 100%; } }
