@@ -27,6 +27,63 @@ $(document).ready(function() {
     $('.benefit-about--right').slick({
         arrows: false,
         fade:true
+    });
+    $('.reviews__slider').slick({
+        arrows: false,
+        centerMode: true,
+        variableWidth: true
     })
+
+//    видео слайдера
+
+    $('.reviews__play--first').on('click',
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('slidePlayer-first', {
+                height: '100%',
+                width: '100%',
+                videoId: '2eUdZXZAhmU',
+                events: {
+                    'onReady': firstPlay
+                }
+            });
+        })
+
+    function firstPlay(event) {
+        event.target.playVideo();
+    }
+
+
+    $('.reviews__play--second').on('click',
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('slidePlayer-second', {
+                height: '100%',
+                width: '100%',
+                videoId: 'pqfIn0jQxn0',
+                events: {
+                    'onReady': secondPlay
+                }
+            });
+        })
+
+    function secondPlay(event) {
+        event.target.playVideo();
+    }
+
+
+    $('.reviews__play--third').on('click',
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('slidePlayer-third', {
+                height: '100%',
+                width: '100%',
+                videoId: 'fZW6qZunXM4',
+                events: {
+                    'onReady': thirdPlay
+                }
+            });
+        })
+
+    function thirdPlay(event) {
+        event.target.playVideo();
+    }
 
 });
