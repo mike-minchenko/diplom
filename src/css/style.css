@@ -1199,6 +1199,44 @@ a {
     max-width: 554px;
     width: 100%; }
 
+.question {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  background: #0842b7 url("../img/question/bg-img.png") no-repeat center center/cover;
+  color: #ffffff;
+  text-align: center; }
+  .question__heading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    max-width: 40.7rem;
+    margin: auto;
+    line-height: 2.8rem;
+    margin-bottom: 2.1rem; }
+  .question__text {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.4rem;
+    max-width: 43.4rem;
+    margin: auto;
+    margin-bottom: 3.1rem; }
+  .question__form {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; }
+  .question__input {
+    width: 26.3rem;
+    height: 48px;
+    padding: 17px;
+    border-radius: 4px;
+    color: #0f1c2e;
+    font-size: 2rem;
+    font-weight: 300;
+    outline-color: #0842b7; }
+  .question__button {
+    max-width: 26.9rem;
+    padding: 15.4px 18px; }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 8px; }
@@ -1318,7 +1356,17 @@ a {
   .reviews-slider__item {
     width: 77vw; }
   .reviews-slider__wrap {
-    width: 100%; } }
+    width: 100%; }
+  .question__form {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 359px;
+    margin: auto; }
+  .question__input {
+    width: 100%;
+    margin-bottom: 24px; }
+  .question__button {
+    max-width: 100%; } }
 
 @media screen and (max-width: 910px) {
   .why img {
@@ -1439,8 +1487,10 @@ a {
       margin-bottom: 3.4rem; }
     .advantages__subheading {
       margin-bottom: 5.4rem; }
-  .price__card {
-    width: 75%; }
+  .price {
+    padding-bottom: 6rem; }
+    .price__card {
+      width: 75%; }
   .bonus {
     padding-top: 6rem;
     padding-bottom: 6rem; }
@@ -1457,6 +1507,9 @@ a {
   .video-wrap__play {
     width: 16%; }
   .return {
+    padding-top: 6rem;
+    padding-bottom: 6rem; }
+  .question {
     padding-top: 6rem;
     padding-bottom: 6rem; } }
 
