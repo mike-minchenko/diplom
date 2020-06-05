@@ -32,6 +32,8 @@
       flex-direction: column
       justify-content: center
       align-items: center
+      &:active, &:focus
+        outline: none
     &__title
       color: $black
       font-size: 2.4rem
@@ -52,16 +54,20 @@
     &--left
       top: 62%
       left: 0
+
     &--right
       top: 62%
       right: 0
       text-align: right
+
     &__item
       color: #061826
       font-size: 1.6rem
       font-weight: 300
       display: block
-
+      z-index: unset
+      &:active, &:focus
+        outline: none
 
 .slick-slider
   min-width: 0
@@ -85,16 +91,11 @@
   left: 0
   background: url('../img/benefit/prev-arrow.png') 0 0 / 100% no-repeat
   outline-color: $primary
-
-
-
 .benefit__slide .slick-arrow.slick-next
   right: 0
   background: url('../img/benefit/next-arrow.png') 0 0 / 100% no-repeat
   outline-color: $primary
-
-
-.benefit__slide .slick-arrow.slick-disabled
+.slick-arrow.slick-disabled
   opacity: 0.2
 .benefit__slide .slick-slide
   height: 100%

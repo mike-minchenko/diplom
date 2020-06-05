@@ -1,0 +1,170 @@
+.lessons
+  background:  radial-gradient(circle 1426px at center, #03256c 0%, #061826 100%)
+  color: $light
+  &__background
+    background: url(../img/lessons/bg-img.png) no-repeat bottom left
+    padding-top: 11.3rem
+    padding-bottom: 12rem
+  &__slide
+    display: flex
+    justify-content: space-between
+    &:active, &:focus
+      outline: none
+
+  &-number
+    position: relative
+
+
+    & .slick-dots
+      display: flex
+      max-width: 55.5rem
+      width: 100%
+      position: absolute
+      top: 10px
+      right: 0
+      z-index: 1000
+
+      &:before
+        content: 'Номер урока:'
+        color: #68799a
+        font-size: 1.6rem
+        font-weight: 300
+        padding-top: 8px
+        margin-right: 5.4rem
+    & .slick-dots li
+      list-style: none
+
+      &.slick-active button
+        color: $light
+        background-color: $secondary
+    & .slick-dots button
+      cursor: pointer
+      width: 3.44rem
+      height: 3.5rem
+      background-color: transparent
+      color: #68799a
+      font-size: 1.6rem
+      font-weight: 300
+      border-radius: 50%
+      outline: none
+
+
+
+
+    &__title
+      font-size: 3.6rem
+      font-weight: 700
+      margin-bottom: 6.9rem
+    &__subtitle
+      font-size: 2.4rem
+      font-weight: 700
+      margin-bottom: 3rem
+    &__homework
+      font-size: 2.4rem
+      font-weight: 700
+      margin-bottom: 3.7rem
+    &__list
+      list-style-type: upper-alpha
+      list-style-position: inside
+      & li
+        color: #68799a
+        font-size: 1.6rem
+        font-weight: 300
+        margin-bottom: 1.9rem
+
+        & span
+          display: inline-flex
+          color: $light
+          font-size: 2.4rem
+          font-weight: 300
+          line-height: 2.88rem
+          padding-left: 1.1rem
+      &--second
+        &:after
+          content: ''
+          display: block
+          width: 45.6rem
+          height: 1px
+          background-color: #26556c
+          opacity: 0.5
+          margin-top: 6.8rem
+
+  &__block
+    &--second
+      width: 48.3%
+      padding-top: 10.7rem
+      & li
+
+        & span
+          font-size: 1.6rem
+          max-width: 42.5rem
+          line-height: 2.48rem
+  &__line
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 7.7rem
+  &__description
+    color: #68799a
+    font-size: 1.6rem
+    font-weight: 300
+    line-height: 2.4rem
+    padding-left: 2.6rem
+    max-width: 43.9rem
+  &__gift
+    width: 48.3%
+    margin-bottom: 1.3rem
+  &__buttons
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+  &__button
+    width: 26.3rem
+    &--first
+      margin-right: 3rem
+
+
+.gift
+  &__subtitle
+    color: #ffffff
+    font-size: 2.4rem
+    font-weight: 700
+    margin-bottom: 2.8rem
+  &__description
+    display: inline-block
+    color: #68799a
+    font-size: 1.6rem
+    font-weight: 300
+    line-height: 1.4
+    max-width: 34.1rem
+  &__img
+    margin-right: 3.1rem
+  &__wrap
+    display: flex
+    align-items: center
+
+.lessons .slick-arrow
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  z-index: 10
+  font-size: 0
+  width: 52px
+  height: 16px
+  cursor: pointer
+.lessons .slick-arrow.slick-prev
+  left: 0
+  background: url('../img/lessons/arrow-prev.png') 0 0 / 100% no-repeat
+  outline-color: $primary
+.lessons .slick-arrow.slick-next
+  right: 0
+  background: url('../img/lessons/arrow-next.png') 0 0 / 100% no-repeat
+  outline-color: $primary
+
+
+
+
+
+
+

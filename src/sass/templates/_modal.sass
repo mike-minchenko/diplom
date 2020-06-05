@@ -1,0 +1,80 @@
+.modal
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  z-index: 1002
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($dark, 0.6)
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: visibility 0.4s, opacity 0.4s
+  &--visible
+    opacity: 1
+    visibility: visible
+  &__dialog
+    position: relative
+    max-width: 100%
+    background: $primary url('../img/modal/modal-bg.jpg') center center/cover
+    padding: 5.857rem 3.5rem
+    color: $light
+    border-radius: 5px
+  &__close
+    position: absolute
+    right: 0
+    top: 0
+    border: none
+    width: 28px
+    height: 28px
+    background: transparent url('../img/modal/exit.svg') no-repeat center
+    margin: 11px
+    margin-right: 13px
+    cursor: pointer
+    outline-color: $primary
+  &__title
+    font-size: 19px
+    font-weight: 700
+    max-width: 40.7rem
+    margin: auto
+    line-height: 28px
+    margin-bottom: 21px
+    text-align: center
+  &__form
+    max-width: 359px
+    width: 100%
+    margin: auto
+  &__input
+    width: 100%
+    height: 39px
+    padding: 10px
+    margin-bottom: 24px
+    border-radius: 4px
+    color: $black
+    font-size: 16px
+    font-weight: 300
+    outline-color: $primary
+    &-group
+      display: flex
+      flex-direction: column
+  &__button
+    width: 100%
+    padding: 11.4px 18px
+
+div
+  &.invalid
+    color: tomato
+    margin-top: 2px
+    position: absolute
+    left: 0
+    bottom: 7px
+input
+  &.invalid
+    border-bottom: 1px solid tomato
+.input
+  &-group
+    position: relative

@@ -8,11 +8,10 @@
   &:hover
     cursor: pointer
   &--primary
+    transition: box-shadow 0.5s
     border: 1px solid $primary
-    box-shadow: 0 1.2rem 2.4rem rgba(6, 57, 158, 0.32)
     background-color: $primary
     color: $light
-    transition: box-shadow 0.3s
     outline-color: $primary
   &--outline
     border: 1px solid $primary
@@ -20,13 +19,14 @@
     color: $primary
     outline-color: #007eff
     transition: box-shadow 0.3s
+    font-size: 1.6rem
   &--light
     border: 1px solid $light
     background-color: transparent
     color: $light
     outline-color: #007eff
     transition: box-shadow 0.3s
-
+    font-size: 1.6rem
 .text
   &--secondary
     color: $secondary

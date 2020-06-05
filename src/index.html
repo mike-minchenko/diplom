@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/burger.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   </head>
@@ -20,10 +21,13 @@
         <a class="logo menu__logo animate__animated animate__fadeInDown" href="index.html">
           <img src="img/menu/logo-img.png" alt="logo" class="menu__img"><span class="menu__logo-text">алготрейдинг</span></a>
         <nav class="nav menu__nav">
-          <a href="#" class="nav__item">Обучение торговле</a>
-          <a href="#" class="nav__item">Аналитика</a>
-          <a href="#" class="nav__item">О проекте</a>
+          <a href="#process" class="nav__item">Обучение торговле</a>
+          <a href="#why" class="nav__item">Аналитика</a>
+          <a href="#format" class="nav__item">О проекте</a>
         </nav>
+        <a href="#" class="menu-btn">
+          <span></span>
+        </a>
         <div class="contacts menu__contacts">
           <a href="tel:+74959999999" class="phone contacts__phone">8 (495)
             <srong class="contacts__phone--bold">999-99-99</srong></a>
@@ -56,7 +60,7 @@
       </div>
     </section>
     <!--    секция Why-->
-    <section class="section why">
+    <section class="section why" id="why">
       <div class="container">
         <h2 class="why__heading">Почему робот?</h2>
         <div class="why__wrap">
@@ -95,17 +99,17 @@
             <h3 class="calc__title">Сколько бы Вы заработали<span class="calc__title--small">, используя торгового робота</span></h3>
             <p class="calc__subtitle">Просто введите данные и сравните результаты </p>
           </div>
-          <form action="send.php" method="POST" class="form calc__form">
+          <form action="calc.php" method="POST" class="form calc__form" id="calcForm">
             <div class="form__line">
               <div class="input-group calc__input-group">
                 <input type="text" class="input form__input calc__input " id="calcFirst__argument"
-                       name="userName"
+                       name="trading"
                        placeholder="0">
                 <label for="calcFirst__argument" class="label form__label ">Количество инструментов, по которым Вы торгуете</label>
               </div>
               <div class="input-group calc__input-group">
                 <input type="text" class="input form__input calc__input " id="calcSecond__argument"
-                       name="userName"
+                       name="profit"
                        placeholder="16">
                 <label for="calcSecond__argument" class="label form__label ">Средняя месячная прибыль(%)</label>
               </div>
@@ -113,27 +117,27 @@
             <div class="form__line">
               <div class="input-group calc__input-group">
                 <input type="text" class="input form__input calc__input " id="calcThird__argument"
-                       name="userName"
+                       name="broker"
                        placeholder="2">
                 <label for="calcThird__argument" class="label form__label ">Количество инструментов Вашего брокера</label>
               </div>
               <div class="input-group calc__input-group">
                 <input type="text" class="input form__input calc__input " id="calcFourth__argument"
-                       name="userName"
+                       name="deposit"
                        placeholder="5 000">
                 <label for="calcFourth__argument" class="label form__label ">Сумма депозита ($)</label>
               </div>
             </div>
           </form>
         </div>
-        <button class="button button--primary calc__button">Просчитать прибыль на 2016 год</button>
+        <button class="button button--primary calc__button" type='submit' form='calcForm' >Просчитать прибыль на 2016 год</button>
       </div>
     </section>
     <!--    секция Start-->
     <section class="section start">
       <div class="container">
         <h3 class="start__heading">Обучитесь алгоритмической торговле <br> и уже <a href="#" class="text--secondary">через 30 дней</a> создайте <br> своего эффективного торгового робота!</h3>
-        <button class="button start__button button--light ">Начать обучение</button>
+        <button class="button start__button button--light  " data-togle="modal">Начать обучение</button>
       </div>
     </section>
     <!--    секция Benefit-->
@@ -202,11 +206,11 @@
         <h3 class="example__heading">Реальный пример работы алгоритма</h3>
         <p class="example__text">Меня с детства интересовал анализ процессов, которые происходят в мире <br> финансов. Именно этот интерес меня подтолкнул получить высшее
           <br> образование в сфере экономико-математического моделирования</p>
-        <button class="button example__button button--primary">Приступить к созданию своего доходного робота</button>
+        <button class="button example__button button--primary" data-togle="modal">Приступить к созданию своего доходного робота</button>
       </div>
     </section>
     <!--    секция Format-->
-    <section class="section format">
+    <section class="section format" id="format">
       <div class="container format__container">
         <h2 class="format__heading">Формат обучения</h2>
         <div class="format__line format__line--first">
@@ -245,7 +249,7 @@
       </div>
     </section>
     <!--    секция Process-->
-    <section class="section process">
+    <section class="section process" id="process">
       <div class="container">
         <h2 class="process__heading"><span class="text--strong">Как выглядит</span> Ваш процесс обучения алготрейдингу?</h2>
         <div class="process__line">
@@ -274,10 +278,266 @@
     </section>
     <!--    секция Lessons-->
     <section class="section lessons">
-      <div class="container">
+      <div class="lessons__background">
+        <div class="container">
+
+          <div class="lessons-number lessons__number">
+
+            <div class="lessons__slide">
+
+              <div class="lessons__block lessons__block--first">
+                <h2 class="lessons-number__title">Урок 1</h2>
+                <h3 class="lessons-number__subtitle">Что вы узнаете на уроке?</h3>
+                <ol class="lessons-number__list">
+                  <li> <span>Что такое алготрейдинг</span></li>
+                  <li> <span>Основные плюсы торговых роботов</span></li>
+                  <li> <span>Основные минусы торговых роботов</span></li>
+                  <li> <span>Сформируете общее понимание <br> направления и курса в целом</span></li>
+                </ol>
+
+              </div>
+
+              <div class="lessons__block lessons__block--second">
+                <h3 class="lessons-number__homework">Домашнее задание</h3>
+                <ol class="lessons-number__list lessons-number__list--second">
+                  <li> <span>Вы сможете дать четкое описание алгоритмической торговле, а также понимать и использовать все плюсы и минусы торговых роботов</span></li>
+                </ol>
+              </div>
+
+            </div>
+
+            <div class="lessons__slide">
+
+              <div class="lessons__block lessons__block--first">
+                <h2 class="lessons-number__title">Урок 2</h2>
+                <h3 class="lessons-number__subtitle">Что вы узнаете на уроке?</h3>
+                <ol class="lessons-number__list">
+                  <li> <span>Что такое алготрейдинг</span></li>
+                  <li> <span>Основные плюсы торговых роботов</span></li>
+                  <li> <span>Основные минусы торговых роботов</span></li>
+                  <li> <span>Сформируете общее понимание <br> направления и курса в целом</span></li>
+                </ol>
+
+              </div>
+
+              <div class="lessons__block lessons__block--second">
+                <h3 class="lessons-number__homework">Домашнее задание</h3>
+                <ol class="lessons-number__list lessons-number__list--second">
+                  <li> <span>Вы сможете дать четкое описание алгоритмической торговле, а также понимать и использовать все плюсы и минусы торговых роботов</span></li>
+                </ol>
+              </div>
+
+            </div>
+
+            <div class="lessons__slide">
+
+              <div class="lessons__block lessons__block--first">
+                <h2 class="lessons-number__title">Урок 3</h2>
+                <h3 class="lessons-number__subtitle">Что вы узнаете на уроке?</h3>
+                <ol class="lessons-number__list">
+                  <li> <span>Что такое алготрейдинг</span></li>
+                  <li> <span>Основные плюсы торговых роботов</span></li>
+                  <li> <span>Основные минусы торговых роботов</span></li>
+                  <li> <span>Сформируете общее понимание <br> направления и курса в целом</span></li>
+                </ol>
+
+              </div>
+
+              <div class="lessons__block lessons__block--second">
+                <h3 class="lessons-number__homework">Домашнее задание</h3>
+                <ol class="lessons-number__list lessons-number__list--second">
+                  <li> <span>Вы сможете дать четкое описание алгоритмической торговле, а также понимать и использовать все плюсы и минусы торговых роботов</span></li>
+                </ol>
+              </div>
+
+            </div>
+
+            <div class="lessons__slide">
+
+              <div class="lessons__block lessons__block--first">
+                <h2 class="lessons-number__title">Урок 4</h2>
+                <h3 class="lessons-number__subtitle">Что вы узнаете на уроке?</h3>
+                <ol class="lessons-number__list">
+                  <li> <span>Что такое алготрейдинг</span></li>
+                  <li> <span>Основные плюсы торговых роботов</span></li>
+                  <li> <span>Основные минусы торговых роботов</span></li>
+                  <li> <span>Сформируете общее понимание <br> направления и курса в целом</span></li>
+                </ol>
+
+              </div>
+
+              <div class="lessons__block lessons__block--second">
+                <h3 class="lessons-number__homework">Домашнее задание</h3>
+                <ol class="lessons-number__list lessons-number__list--second">
+                  <li> <span>Вы сможете дать четкое описание алгоритмической торговле, а также понимать и использовать все плюсы и минусы торговых роботов</span></li>
+                </ol>
+              </div>
+
+            </div>
+
+            <div class="lessons__slide">
+
+              <div class="lessons__block lessons__block--first">
+                <h2 class="lessons-number__title">Урок 5</h2>
+                <h3 class="lessons-number__subtitle">Что вы узнаете на уроке?</h3>
+                <ol class="lessons-number__list">
+                  <li> <span>Что такое алготрейдинг</span></li>
+                  <li> <span>Основные плюсы торговых роботов</span></li>
+                  <li> <span>Основные минусы торговых роботов</span></li>
+                  <li> <span>Сформируете общее понимание <br> направления и курса в целом</span></li>
+                </ol>
+
+              </div>
+
+              <div class="lessons__block lessons__block--second">
+                <h3 class="lessons-number__homework">Домашнее задание</h3>
+                <ol class="lessons-number__list lessons-number__list--second">
+                  <li> <span>Вы сможете дать четкое описание алгоритмической торговле, а также понимать и использовать все плюсы и минусы торговых роботов</span></li>
+                </ol>
+              </div>
+
+            </div>
+
+            <div class="lessons__slide">
+
+              <div class="lessons__block lessons__block--first">
+                <h2 class="lessons-number__title">Урок 6</h2>
+                <h3 class="lessons-number__subtitle">Что вы узнаете на уроке?</h3>
+                <ol class="lessons-number__list">
+                  <li> <span>Что такое алготрейдинг</span></li>
+                  <li> <span>Основные плюсы торговых роботов</span></li>
+                  <li> <span>Основные минусы торговых роботов</span></li>
+                  <li> <span>Сформируете общее понимание <br> направления и курса в целом</span></li>
+                </ol>
+
+              </div>
+
+              <div class="lessons__block lessons__block--second">
+                <h3 class="lessons-number__homework">Домашнее задание</h3>
+                <ol class="lessons-number__list lessons-number__list--second">
+                  <li> <span>Вы сможете дать четкое описание алгоритмической торговле, а также понимать и использовать все плюсы и минусы торговых роботов</span></li>
+                </ol>
+              </div>
+
+            </div>
+
+            <div class="lessons__slide">
+
+              <div class="lessons__block lessons__block--first">
+                <h2 class="lessons-number__title">Урок 7</h2>
+                <h3 class="lessons-number__subtitle">Что вы узнаете на уроке?</h3>
+                <ol class="lessons-number__list">
+                  <li> <span>Что такое алготрейдинг</span></li>
+                  <li> <span>Основные плюсы торговых роботов</span></li>
+                  <li> <span>Основные минусы торговых роботов</span></li>
+                  <li> <span>Сформируете общее понимание <br> направления и курса в целом</span></li>
+                </ol>
+
+              </div>
+
+              <div class="lessons__block lessons__block--second">
+                <h3 class="lessons-number__homework">Домашнее задание</h3>
+                <ol class="lessons-number__list lessons-number__list--second">
+                  <li> <span>Вы сможете дать четкое описание алгоритмической торговле, а также понимать и использовать все плюсы и минусы торговых роботов</span></li>
+                </ol>
+              </div>
+
+            </div>
+
+            <div class="lessons__slide">
+
+              <div class="lessons__block lessons__block--first">
+                <h2 class="lessons-number__title">Урок 8</h2>
+                <h3 class="lessons-number__subtitle">Что вы узнаете на уроке?</h3>
+                <ol class="lessons-number__list">
+                  <li> <span>Что такое алготрейдинг</span></li>
+                  <li> <span>Основные плюсы торговых роботов</span></li>
+                  <li> <span>Основные минусы торговых роботов</span></li>
+                  <li> <span>Сформируете общее понимание <br> направления и курса в целом</span></li>
+                </ol>
+
+              </div>
+
+              <div class="lessons__block lessons__block--second">
+                <h3 class="lessons-number__homework">Домашнее задание</h3>
+                <ol class="lessons-number__list lessons-number__list--second">
+                  <li> <span>Вы сможете дать четкое описание алгоритмической торговле, а также понимать и использовать все плюсы и минусы торговых роботов</span></li>
+                </ol>
+              </div>
+
+            </div>
+
+            <div class="lessons__slide">
+
+              <div class="lessons__block lessons__block--first">
+                <h2 class="lessons-number__title">Урок 9</h2>
+                <h3 class="lessons-number__subtitle">Что вы узнаете на уроке?</h3>
+                <ol class="lessons-number__list">
+                  <li> <span>Что такое алготрейдинг</span></li>
+                  <li> <span>Основные плюсы торговых роботов</span></li>
+                  <li> <span>Основные минусы торговых роботов</span></li>
+                  <li> <span>Сформируете общее понимание <br> направления и курса в целом</span></li>
+                </ol>
+
+              </div>
+
+              <div class="lessons__block lessons__block--second">
+                <h3 class="lessons-number__homework">Домашнее задание</h3>
+                <ol class="lessons-number__list lessons-number__list--second">
+                  <li> <span>Вы сможете дать четкое описание алгоритмической торговле, а также понимать и использовать все плюсы и минусы торговых роботов</span></li>
+                </ol>
+              </div>
+
+            </div>
+
+            <div class="lessons__slide">
+
+              <div class="lessons__block lessons__block--first">
+                <h2 class="lessons-number__title">Урок 10</h2>
+                <h3 class="lessons-number__subtitle">Что вы узнаете на уроке?</h3>
+                <ol class="lessons-number__list">
+                  <li> <span>Что такое алготрейдинг</span></li>
+                  <li> <span>Основные плюсы торговых роботов</span></li>
+                  <li> <span>Основные минусы торговых роботов</span></li>
+                  <li> <span>Сформируете общее понимание <br> направления и курса в целом</span></li>
+                </ol>
+
+              </div>
+
+              <div class="lessons__block lessons__block--second">
+                <h3 class="lessons-number__homework">Домашнее задание</h3>
+                <ol class="lessons-number__list lessons-number__list--second">
+                  <li> <span>Вы сможете дать четкое описание алгоритмической торговле, а также понимать и использовать все плюсы и минусы торговых роботов</span></li>
+                </ol>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="lessons__line">
+            <p class="lessons__description">Вы сможете дать четкое описание алгоритмической торговле, а также понимать и использовать все плюсы и минусы торговых роботов</p>
+            <div class="gift lessons__gift">
+              <h3 class="gift__subtitle">Бонус</h3>
+              <div class="gift__wrap">
+                <img src="img/lessons/gift.png" alt="бонус" class="gift__img">
+                <p class="gift__description">В качестве бонуса мы предоставляем вам 10-ку лучших БЕСПЛАТНЫХ форекс роботов</p>
+              </div>
+
+
+            </div>
+          </div>
+
+
+          <div class="lessons__buttons">
+            <button class="button lessons__button lessons__button--first button--light" data-togle="modal">узнать подробнее</button>
+            <button class="button lessons__button button--primary" data-togle="modal">Начать обучение</button>
+          </div>
 
 
 
+
+        </div>
       </div>
     </section>
     <!--    секция Advantages-->
@@ -372,7 +632,7 @@
       </div>
     </section>
     <!--    секция  Bonus-->
-    <section class="section bonus">
+    <section class="section bonus" id="bonus">
 
       <div class="container">
         <h2 class="bonus__heading">Получите первые видеоуроки совершенно бесплатно уже сейчас!</h2>
@@ -422,7 +682,7 @@
               <img class="reviews__play reviews__play--second" src="img/reviews/play-img.png" alt="play">
             </div>
             <h3 class="reviews-slider__title">Виталий</h3>
-            <p class="reviews-slider__description">первые с финансовыми рынками столкнулась в 17 лет, особенно интересовали портфельные инвестиции и риск-менеджмент. Первый заработок составил 12 тысяч долларов, правда, виртуальных.</p>
+            <p class="reviews-slider__description">Впервые с финансовыми рынками столкнулась в 17 лет, особенно интересовали портфельные инвестиции и риск-менеджмент. Первый заработок составил 12 тысяч долларов, правда, виртуальных.</p>
 
           </div>
           <div class="reviews-slider__item reviews-slider__item--third">
@@ -431,7 +691,7 @@
               <img class="reviews__play reviews__play--third" src="img/reviews/play-img.png" alt="play">
             </div>
             <h3 class="reviews-slider__title">Алексей</h3>
-            <p class="reviews-slider__description">первые с финансовыми рынками столкнулась в 17 лет, особенно интересовали портфельные инвестиции и риск-менеджмент. Первый заработок составил 12 тысяч долларов, правда, виртуальных.</p>
+            <p class="reviews-slider__description">Впервые с финансовыми рынками столкнулась в 17 лет, особенно интересовали портфельные инвестиции и риск-менеджмент. Первый заработок составил 12 тысяч долларов, правда, виртуальных.</p>
 
           </div>
         </div>
@@ -473,7 +733,7 @@
     <section class="section return">
       <div class="container">
         <h3 class="return__heading">Мы вернем Вам 100%&nbsp;вложенных средств, если Вам не понравятся первые 3 урока</h3>
-        <button class="button return__button button--primary ">Приступить к созданию своего доходного робота</button>
+        <button class="button return__button button--primary " data-togle="modal">Приступить к созданию своего доходного робота</button>
       </div>
     </section>
     <!--    секция Price-->
@@ -548,13 +808,104 @@
       </div>
 
     </section>
-
-
-
   </main>
+  <!--    секция Footer-->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__line">
+
+        <div class="footer__block ">
+          <h3 class="footer__title">Алготрейдинг</h3>
+          <p class="footer__subtitle">Обучение <br> алгоритмической <br> торговле</p>
+        </div>
+
+        <nav class="footer__nav footer__nav--first">
+          <a href="#why" class="footer__link footer__link--first">Аналитика</a>
+          <a href="#format" class="footer__link">О проекте</a>
+          <a href="#" class="footer__link">Контакты</a>
+        </nav>
+
+        <nav class="footer__nav footer__nav--second">
+          <a href="#" class="footer__link footer__link--first">Вопросы и ответы</a>
+          <a href="#bonus" class="footer__link">Записаться на курс</a>
+        </nav>
+
+        <form action="send.php" method="POST" class="form footer__form">
+
+          <div class="input-group footer__input-group">
+            <label for="footerUser-name"></label>
+            <input type="text" class="input form__input footer__input" name="userName" id="footerUser-name" placeholder="E-mail рассылка">
+            <button class="button footer__button"></button>
+          </div>
+
+          <div class="social footer__social">
+            <a href="https://ru-ru.facebook.com/" class="social__link" target="_blank">
+              <img src="img/footer/facebook.png" alt="facebook">
+            </a>
+            <a href="https://vk.com/" class="social__link" target="_blank">
+              <img src="img/footer/vk.png" alt="vk">
+            </a>
+            <a href="https://www.youtube.com/" class="social__link" target="_blank">
+              <img src="img/footer/youtube.png" alt="youtube">
+            </a>
+            <a href="https://www.instagram.com/" class="social__link" target="_blank">
+              <img src="img/footer/inst.png" alt="inst">
+            </a>
+            <button class="totop"></button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </footer>
+  <!-- модальное окно  -->
+  <div class="modal">
+    <div class="modal__dialog">
+
+      <button class="modal__close"></button>
+
+      <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с Вами </h3>
+
+      <form action="send.php" method="POST" class="form modal__form">
+
+        <div class="input-group modal__input-group">
+          <label for="modalUser-name" class="label form__label"></label>
+          <input type="text" class="input form__input modal__input" name="userName" id="modalUser-name" placeholder="Как вас зовут:">
+        </div>
+
+        <div class="input-group modal__input-group">
+          <label for="modalUser-phone" class="label form__label label--light"></label>
+          <input type="tel" class="input form__input modal__input" name="userPhone" id="modalUser-phone" placeholder="Ваш номер телефона:">
+        </div>
+
+        <div class="input-group modal__input-group modal__user-email">
+          <label for="user-email" class="label form__label label--light"></label>
+          <input type="email" class="input form__input modal__input" name="userEmail" id="user-email" placeholder="Ваш email">
+        </div>
+
+        <button class="button button--primary modal__button">Отправить заявку</button>
+      </form>
+
+    </div>
+
+  </div>
+  <!--  окно благодарности-->
+  <div class="thanks">
+
+    <div class="thanks__block">
+
+      <h2 class="thanks__title">Спасибо за заявку</h2>
+      <p class="thanks__subtitle">Наш менеджер свяжется с Вами <br> в течении 15 минут</p>
+      <button class="button thanks__button button--primary">Закрыть</button>
+
+    </div>
+
+  </div>
 
 
-   <script src="js/jquery-3.5.1.min.js"></script>
+
+  <script src="js/jquery-3.5.1.min.js"></script>
    <script src="js/wow.min.js"></script>
    <script src="js/jquery.fancybox.min.js"></script>
    <script src="js/jquery.validate.min.js"></script>

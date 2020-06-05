@@ -24,9 +24,9 @@
         transform: scaleX(1)
   .button
     &--primary
-      transition: box-shadow 0.3s
+      transition: background-color 0.3s
       &:hover
-        box-shadow: none
+        box-shadow: 0 6px 12px 2px rgba(8, 66, 183, 0.2)
         background-color: rgba($primary, 0.8)
     &--outline
       transition: box-shadow 0.3s
@@ -67,11 +67,58 @@
       transition: box-shadow 0.3s
       &:hover
         box-shadow: 0 0 20px rgba($primary, 0.5) inset
+  .totop
+    transition: box-shadow 0.3s
+    &:hover
+      box-shadow: 0 0 20px rgba($primary, 0.5) inset
+  .social
+    &__link
+      transition: box-shadow 0.3s
+      &:hover
+        box-shadow: 0 0 20px rgba($primary, 0.5) inset
+  .footer
+    &__button
+      transition: opacity 0.3s
+      &:hover
+        opacity: 60%
+    &__link
+      transition: color 0.3s
+      &:hover
+        color: $primary
+
 
 
 @media screen and ( max-width: 992px )
+  .menu
+    &__nav
+      opacity: 0
+      visibility: hidden
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      position: absolute
+      top: 101%
+      left: 50%
+      transform: translateX(-50%)
+      max-width: 320px
+      height: 197px
+      background-color: $primary
+      transition: opacity 0.3s
+      border-bottom-right-radius: 5px
+      border-bottom-left-radius: 5px
+      &--active
+        opacity: 1
+        visibility: visible
+    &-btn
+      display: block
   .nav
-    display: none
+    &__item
+      color: $light
+      margin-bottom: 30px
+      &:after
+        display: none
   .hero
     &__title
       font-size: 6.8rem
@@ -88,6 +135,9 @@
     &__input
       &-group
         margin-bottom: 15px
+        & div
+          &.invalid
+            bottom: -12px
     &__form
       width: 55%
     &__wrap
@@ -152,8 +202,16 @@
     &__input
       width: 100%
       margin-bottom: 24px
+      &-group
+        & div
+          &.invalid
+            bottom: 8px
     &__button
-      max-width: 100%
+      width: 100%
+  .lessons
+    &__block
+      &--second li span
+        max-width: 92%
 
 
 
@@ -212,8 +270,36 @@
       width: 54%
       &:nth-child(1)
         width: 54%
-
-
+  .footer
+    padding-top: 6rem
+    padding-bottom: 6rem
+    &__nav
+      display: none
+  .lessons
+    &__number
+      margin-bottom: 3rem
+      & .slick-dots
+        flex-direction: column
+        width: auto
+        top: 0
+        &:before
+          display: none
+    &__block
+      &--second
+        display: none
+    &__description
+      display: none
+    &__line
+      align-items: flex-end
+    &__gift
+      padding-left: 2.6rem
+      width: 100%
+    &__buttons
+      flex-direction: column
+    &__button
+      &--first
+        margin-right: 0
+        margin-bottom: 3rem
 
 
 @media screen and ( max-width: 576px )
@@ -329,7 +415,21 @@
   .question
     padding-top: 6rem
     padding-bottom: 6rem
+  .footer
+    &__block
+      display: none
+    &__line
+      justify-content: center
+  .lessons
+    &__background
+      padding-top: 6rem
+      padding-bottom: 6rem
 
+@media screen and ( max-width: 391px )
+  .lessons
+    &-number
+      &__list li span
+        max-width: 92%
 @media screen and ( max-width: 375px )
   .calc
     &__button
@@ -367,5 +467,14 @@
     &-slider
       &__wrap
         margin-bottom: 4.5rem
+  .lessons
+    &__gift
+      padding-left: 0
+    &__line
+      margin-bottom: 0
+    &__buttons
+      padding-top: 7rem
+    & .slick-arrow
+      top: 28px
 
 
