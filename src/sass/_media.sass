@@ -1,3 +1,6 @@
+@media screen and ( max-width: 1650px )
+  .hero
+    padding-bottom: 67rem
 @media screen and ( max-width: 1200px )
   html
     font-size: 8px
@@ -85,6 +88,11 @@
       transition: color 0.3s
       &:hover
         color: $primary
+  .totop
+    &--scroll
+      transition: opacity 0.3s
+      &:hover
+        opacity: 0.9
 
 
 
@@ -239,7 +247,7 @@
 
 @media screen and ( max-width: 768px )
   .why
-    margin-top: -18.2rem
+    margin-top: -29.5rem
     padding-bottom: 3.2rem
   .calc
     &__container
@@ -271,10 +279,19 @@
       &:nth-child(1)
         width: 54%
   .footer
+
     padding-top: 6rem
     padding-bottom: 6rem
+    &__line
+      flex-wrap: wrap
+
+    &__block
+      width: 100%
     &__nav
-      display: none
+      width: 50%
+    &__form
+      display: block
+      margin-top: 30px
   .lessons
     &__number
       margin-bottom: 3rem
@@ -305,8 +322,14 @@
 @media screen and ( max-width: 576px )
   .menu
     &__logo
+      align-items: center
       &-text
         font-size: 2rem
+    &__contacts
+      padding-top: 6px
+    &__img
+      margin-right: 0.2rem
+
   .contacts
     &__phone
       font-size: 1.8rem
@@ -415,15 +438,29 @@
   .question
     padding-top: 6rem
     padding-bottom: 6rem
-  .footer
-    &__block
-      display: none
-    &__line
-      justify-content: center
+
   .lessons
     &__background
       padding-top: 6rem
       padding-bottom: 6rem
+    &__number
+      margin-bottom: 6rem
+      & .slick-dots
+        flex-direction: row
+        top: unset
+        left: 50%
+        transform: translateX(-50%)
+        bottom: -31px
+        right: unset
+  .footer
+    &__line
+      justify-content: center
+
+  .totop
+    &--scroll
+      right: 16px
+
+
 
 @media screen and ( max-width: 391px )
   .lessons
@@ -432,15 +469,24 @@
         max-width: 92%
 @media screen and ( max-width: 375px )
   .calc
+    padding-bottom: 6rem
+    &__container
+      padding-top: 6rem
     &__button
       padding: 13.5px 20px
   .start
     &__button
       width: 100%
+  .benefit
+    padding-top: 6rem
   .example
+    &__container
+      padding-bottom: 6rem
     &__video-wrap
       height: 210px
   .format
+    padding-top: 6rem
+    padding-bottom: 6rem
     &__block
       padding-left: 2.3rem
       margin-bottom: 33px
@@ -473,8 +519,27 @@
     &__line
       margin-bottom: 0
     &__buttons
-      padding-top: 7rem
+      padding-top: 3rem
+    &__button
+      width: 100%
     & .slick-arrow
       top: 28px
+
+@media screen and ( max-height: 400px )
+  .modal
+    &__dialog
+      max-width: 568px
+      width: 100%
+      height: 320px
+      padding: 2.057rem 3.5rem
+    &__title
+      margin-bottom: 17px
+    &__input
+      margin-bottom: 18px
+  .thanks
+    &__block
+      height: 320px
+
+
 
 

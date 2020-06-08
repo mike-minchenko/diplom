@@ -18,7 +18,7 @@
     <div class="container">
 
       <div class="menu">
-        <a class="logo menu__logo animate__animated animate__fadeInDown" href="index.html">
+        <a class="logo menu__logo animate__animated animate__fadeInDown" href="http://from0toweb.ru/algotraiding/">
           <img src="img/menu/logo-img.png" alt="logo" class="menu__img"><span class="menu__logo-text">алготрейдинг</span></a>
         <nav class="nav menu__nav">
           <a href="#process" class="nav__item">Обучение торговле</a>
@@ -30,7 +30,7 @@
         </a>
         <div class="contacts menu__contacts">
           <a href="tel:+74959999999" class="phone contacts__phone">8 (495)
-            <srong class="contacts__phone--bold">999-99-99</srong></a>
+            <span class="contacts__phone--bold">999-99-99</span></a>
         </div>
 
       </div>
@@ -48,8 +48,8 @@
           <p class="hero__text">Всего за месяц прямо на сессиях создайте своего эффективного торгового робота с нуля!</p>
           <div class="hero__description-wrap">
             <div class="hero__buttons-wrap">
-              <button class="button hero__button button--primary" data-togle="modal">Начать обучение</button>
-              <button class="button hero__button button--outline" data-togle="modal">узнать подробнее</button>
+              <button class="button hero__button button--primary" data-togle="modal" onclick="ym(64664599,'reachGoal','button'); return true;" >Начать обучение</button>
+              <button class="button hero__button button--outline" data-togle="modal"  onclick="ym(64664599,'reachGoal','button'); return true;">узнать подробнее</button>
             </div>
             <p class="hero__description">
               Ваш собственный
@@ -90,7 +90,7 @@
     <!--    секия Calc-->
     <section class="section section calc">
       <div class="container calc__container">
-        <h2 class="calc__heading">Создайте своего <br> авторского торгового робота</h2>
+        <h2 class="calc__heading wow animate__fadeInUp">Создайте своего <br> авторского торгового робота</h2>
         <p class="calc__text">
           получайте прибыль даже с нулевыми знаниями в сфере алгоритмической торговли
         </p>
@@ -99,7 +99,7 @@
             <h3 class="calc__title">Сколько бы Вы заработали<span class="calc__title--small">, используя торгового робота</span></h3>
             <p class="calc__subtitle">Просто введите данные и сравните результаты </p>
           </div>
-          <form action="calc.php" method="POST" class="form calc__form" id="calcForm">
+          <form action="calc.php" method="POST" class="form calc__form">
             <div class="form__line">
               <div class="input-group calc__input-group">
                 <input type="text" class="input form__input calc__input " id="calcFirst__argument"
@@ -110,7 +110,7 @@
               <div class="input-group calc__input-group">
                 <input type="text" class="input form__input calc__input " id="calcSecond__argument"
                        name="profit"
-                       placeholder="16">
+                       placeholder="0">
                 <label for="calcSecond__argument" class="label form__label ">Средняя месячная прибыль(%)</label>
               </div>
             </div>
@@ -118,32 +118,32 @@
               <div class="input-group calc__input-group">
                 <input type="text" class="input form__input calc__input " id="calcThird__argument"
                        name="broker"
-                       placeholder="2">
+                       placeholder="0">
                 <label for="calcThird__argument" class="label form__label ">Количество инструментов Вашего брокера</label>
               </div>
               <div class="input-group calc__input-group">
                 <input type="text" class="input form__input calc__input " id="calcFourth__argument"
                        name="deposit"
-                       placeholder="5 000">
+                       placeholder="0">
                 <label for="calcFourth__argument" class="label form__label ">Сумма депозита ($)</label>
               </div>
             </div>
           </form>
         </div>
-        <button class="button button--primary calc__button" type='submit' form='calcForm' >Просчитать прибыль на 2016 год</button>
+        <button class="button button--primary calc__button" onclick="$('.calc__form').submit();">Просчитать прибыль на 2016 год</button>
       </div>
     </section>
     <!--    секция Start-->
     <section class="section start">
       <div class="container">
-        <h3 class="start__heading">Обучитесь алгоритмической торговле <br> и уже <a href="#" class="text--secondary">через 30 дней</a> создайте <br> своего эффективного торгового робота!</h3>
-        <button class="button start__button button--light  " data-togle="modal">Начать обучение</button>
+        <h3 class="start__heading wow animate__fadeIn">Обучитесь алгоритмической торговле <br> и уже <a href="#" class="text--secondary">через 30 дней</a> создайте <br> своего эффективного торгового робота!</h3>
+        <button class="button start__button button--light  " data-togle="modal" onclick="ym(64664599,'reachGoal','button'); return true;">Начать обучение</button>
       </div>
     </section>
     <!--    секция Benefit-->
     <section class="section benefit">
       <div class="container">
-        <h3 class="benefit__heading"><span class="text--strong">Какие выгоды</span> я&nbsp;получу <br>от  создания своего робота?</h3>
+        <h3 class="benefit__heading wow animate__fadeInUp"><span class="text--strong">Какие выгоды</span> я&nbsp;получу <br>от  создания своего робота?</h3>
 
         <div class="benefit__wrap">
           <div class="benefit-about benefit-about--left">
@@ -186,8 +186,8 @@
     <!--    секция Steps-->
     <section class="section steps">
       <div class="container">
-        <h2 class="steps__heading"><span class="text--strong">Всё</span> очень просто</h2>
-        <p class="steps__text">Никаких лишних движений во время обучения. <br>Мы с Вами будем чётко следовать <br>по разработанной нами карте обучения.</p>
+        <h2 class="steps__heading wow animate__fadeInUp"><span class="text--strong">Всё</span> очень просто</h2>
+        <p class="steps__text wow animate__fadeInUp">Никаких лишних движений во время обучения. <br>Мы с Вами будем чётко следовать <br>по разработанной нами карте обучения.</p>
         <span class="steps__description">Создание робота</span>
         <span class="steps__description">Внедрение</span>
         <span class="steps__description">Оптимизация</span>
@@ -206,13 +206,13 @@
         <h3 class="example__heading">Реальный пример работы алгоритма</h3>
         <p class="example__text">Меня с детства интересовал анализ процессов, которые происходят в мире <br> финансов. Именно этот интерес меня подтолкнул получить высшее
           <br> образование в сфере экономико-математического моделирования</p>
-        <button class="button example__button button--primary" data-togle="modal">Приступить к созданию своего доходного робота</button>
+        <button class="button example__button button--primary" data-togle="modal" onclick="ym(64664599,'reachGoal','button'); return true;">Приступить к созданию своего доходного робота</button>
       </div>
     </section>
     <!--    секция Format-->
     <section class="section format" id="format">
       <div class="container format__container">
-        <h2 class="format__heading">Формат обучения</h2>
+        <h2 class="format__heading wow animate__zoomIn">Формат обучения</h2>
         <div class="format__line format__line--first">
           <a href="#" class="format-block format__block format__block--first">
             <h3 class="format-block__title">Тестирование <br> алгоритмов</h3>
@@ -224,22 +224,22 @@
           </a>
         </div>
         <div class="format__line format__line--second">
-          <div class="format-item format__item">
+          <div class="format-item format__item wow animate__fadeInUp">
             <img src="img/format/icon-1.png" alt="иконка" class="format-item__img">
             <h3 class="format-item__title">Видеолекции</h3>
             <p class="format-item__subtitle">Смотрите лекции on-line <br>от лучших преподавателей <br>алготрейдинга</p>
           </div>
-          <div class="format-item format__item">
+          <div class="format-item format__item wow animate__fadeInUp">
             <img src="img/format/icon-2.png" alt="иконка" class="format-item__img">
             <h3 class="format-item__title">Практическая часть</h3>
             <p class="format-item__subtitle">Выполняйте домашние задания <br>и проверяйте полученные знания <br>с помощью различных <br>интерактивных тестов</p>
           </div>
-          <div class="format-item format__item">
+          <div class="format-item format__item wow animate__fadeInUp">
             <img src="img/format/icon-3.png" alt="иконка" class="format-item__img">
             <h3 class="format-item__title">Форум</h3>
             <p class="format-item__subtitle">Обговаривайте вопросы, которые <br>Вас интересуют, напрямую <br>с преподавателями и с другими <br> студентами на закрытом форуме</p>
           </div>
-          <div class="format-item format__item">
+          <div class="format-item format__item wow animate__fadeInUp">
             <img src="img/format/icon-4.png" alt="иконка" class="format-item__img">
             <h3 class="format-item__title">On-line вебинары</h3>
             <p class="format-item__subtitle">Учувствуйте в мастер-классах <br> наших преподавателей в режиме <br> реально времени, и тут же<br> обсуждайте с ними интересующие
@@ -251,7 +251,7 @@
     <!--    секция Process-->
     <section class="section process" id="process">
       <div class="container">
-        <h2 class="process__heading"><span class="text--strong">Как выглядит</span> Ваш процесс обучения алготрейдингу?</h2>
+        <h2 class="process__heading wow animate__zoomIn"><span class="text--strong">Как выглядит</span> Ваш процесс обучения алготрейдингу?</h2>
         <div class="process__line">
           <div class="process-item process__item">
             <h3 class="process-item__title">20</h3>
@@ -530,8 +530,8 @@
 
 
           <div class="lessons__buttons">
-            <button class="button lessons__button lessons__button--first button--light" data-togle="modal">узнать подробнее</button>
-            <button class="button lessons__button button--primary" data-togle="modal">Начать обучение</button>
+            <button class="button lessons__button lessons__button--first button--light" data-togle="modal" onclick="ym(64664599,'reachGoal','button'); return true;">узнать подробнее</button>
+            <button class="button lessons__button button--primary" data-togle="modal" onclick="ym(64664599,'reachGoal','button'); return true;">Начать обучение</button>
           </div>
 
 
@@ -543,11 +543,11 @@
     <!--    секция Advantages-->
     <section class="section advantages">
       <div class="container">
-        <h2 class="advantages__heading">Преимущества курса</h2>
+        <h2 class="advantages__heading wow animate__zoomIn">Преимущества курса</h2>
 
         <strong class="advantages__subheading">Интенсив</strong>
 
-        <div class="advantages__line advantages__line--first">
+        <div class="advantages__line advantages__line--first wow animate__fadeInUp">
           <div class="advantages__item">
             <img src="img/advantages/icon-1.png" alt="иконка" class="advantages__icon">
             <h3 class="advantages__title">Профессионалы</h3>
@@ -567,7 +567,7 @@
 
         <strong class="advantages__subheading">Результат</strong>
 
-        <div class="advantages__line advantages__line--second">
+        <div class="advantages__line advantages__line--second wow animate__fadeInUp animate__delay-1s">
           <div class="advantages__item">
             <img src="img/advantages/icon-4.png" alt="иконка" class="advantages__icon">
             <h3 class="advantages__title">Авторские роботы.</h3>
@@ -591,8 +591,8 @@
     <!--    секция Price-->
     <section class="section price">
       <div class="container">
-        <h2 class="price__heading"><span class="text--strong">Сколько</span> стоит обучение?</h2>
-        <p class="price__text">Станьте частью алготрейдинга прямо сейчас <br> и всего за месяц прямо на сессиях создайте своего эффективного торгового робота с нуля!</p>
+        <h2 class="price__heading wow animate__zoomIn"><span class="text--strong">Сколько</span> стоит обучение?</h2>
+        <p class="price__text wow animate__zoomIn">Станьте частью алготрейдинга прямо сейчас <br> и всего за месяц прямо на сессиях создайте своего эффективного торгового робота с нуля!</p>
         <div class="price__line">
 
           <div class="price__card">
@@ -662,7 +662,7 @@
     </section>
     <!--    секция Reviews-->
     <section class="section reviews">
-      <h2 class="reviews__heading"><span class="text--strong">Отзывы</span> наших учеников</h2>
+      <h2 class="reviews__heading wow animate__zoomIn"><span class="text--strong">Отзывы</span> наших учеников</h2>
 
 
       <div class="reviews__container">
@@ -733,14 +733,14 @@
     <section class="section return">
       <div class="container">
         <h3 class="return__heading">Мы вернем Вам 100%&nbsp;вложенных средств, если Вам не понравятся первые 3 урока</h3>
-        <button class="button return__button button--primary " data-togle="modal">Приступить к созданию своего доходного робота</button>
+        <button class="button return__button button--primary " data-togle="modal" onclick="ym(64664599,'reachGoal','button'); return true;">Приступить к созданию своего доходного робота</button>
       </div>
     </section>
     <!--    секция Price-->
     <section class="section price">
       <div class="container">
-        <h2 class="price__heading"><span class="text--strong">Сколько</span> стоит обучение?</h2>
-        <p class="price__text">Станьте частью алготрейдинга прямо сейчас <br> и всего за месяц прямо на сессиях создайте своего эффективного торгового робота с нуля!</p>
+        <h2 class="price__heading wow animate__zoomIn"><span class="text--strong">Сколько</span> стоит обучение?</h2>
+        <p class="price__text wow animate__zoomIn">Станьте частью алготрейдинга прямо сейчас <br> и всего за месяц прямо на сессиях создайте своего эффективного торгового робота с нуля!</p>
         <div class="price__line">
 
           <div class="price__card">
@@ -810,8 +810,8 @@
     </section>
   </main>
   <!--    секция Footer-->
-  <footer class="footer">
-    <div class="container">
+  <footer class="footer" id="footer">
+    <div class="container ">
       <div class="footer__line">
 
         <div class="footer__block ">
@@ -834,7 +834,7 @@
 
           <div class="input-group footer__input-group">
             <label for="footerUser-name"></label>
-            <input type="text" class="input form__input footer__input" name="userName" id="footerUser-name" placeholder="E-mail рассылка">
+            <input type="text" class="input form__input footer__input" name="userEmail" id="footerUser-name" placeholder="E-mail рассылка">
             <button class="button footer__button"></button>
           </div>
 
@@ -851,14 +851,16 @@
             <a href="https://www.instagram.com/" class="social__link" target="_blank">
               <img src="img/footer/inst.png" alt="inst">
             </a>
-            <button class="totop"></button>
+            <button class="totop totop--fixed"></button>
+
           </div>
         </form>
       </div>
-
     </div>
 
+    <span class="footer__creator">Создано в Glo Academy</span>
   </footer>
+  <button class="totop totop--scroll"></button>
   <!-- модальное окно  -->
   <div class="modal">
     <div class="modal__dialog">
@@ -903,6 +905,19 @@
 
   </div>
 
+  <div class="processing">
+
+    <div class="processing__block">
+
+      <h2 class="processing__title">Спасибо</h2>
+      <p class="processing__subtitle">Ваша заявка обрабатывается</p>
+      <button class="button processing__button button--primary">Закрыть</button>
+
+    </div>
+
+  </div>
+
+  <!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(64664599, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/64664599" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 
 
   <script src="js/jquery-3.5.1.min.js"></script>

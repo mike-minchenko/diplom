@@ -34,7 +34,7 @@ try {
     $mail->Subject = 'Новая заявка с сайта Алготрейдинг';
     $mail->Body    = "Имя пользователя: ${userName}.
                       Телефон: ${userPhone}.
-                      Почта: ${userEmail}. ;
+                      Почта: ${userEmail}.";
 
 
     if ($mail->send()) {

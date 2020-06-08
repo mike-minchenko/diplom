@@ -39,6 +39,7 @@ $(document).ready(function() {
         autoplay: true,
         autoplaySpeed: 2500,
         speed: 800
+
     });
     $('.lessons__number').slick({
         arrows: true,
@@ -51,7 +52,8 @@ $(document).ready(function() {
         responsive: [{
             breakpoint: 576,
             settings: {
-                dots: false,
+                arrows: false,
+
             }
         }]
 
@@ -73,6 +75,9 @@ $(document).ready(function() {
 
     function firstPlay(event) {
         event.target.playVideo();
+        $(".reviews-slider").on('afterChange', function(){
+            player.pauseVideo();
+        })
     }
 
 
@@ -81,7 +86,7 @@ $(document).ready(function() {
             player = new YT.Player('slidePlayer-second', {
                 height: '100%',
                 width: '100%',
-                videoId: 'pqfIn0jQxn0',
+                videoId: 'eg3s0c_X_ao',
                 events: {
                     'onReady': secondPlay
                 }
@@ -90,6 +95,9 @@ $(document).ready(function() {
 
     function secondPlay(event) {
         event.target.playVideo();
+        $(".reviews-slider").on('afterChange', function(){
+            player.pauseVideo();
+        })
     }
 
 
@@ -107,6 +115,9 @@ $(document).ready(function() {
 
     function thirdPlay(event) {
         event.target.playVideo();
+        $(".reviews-slider").on('afterChange', function(){
+            player.pauseVideo();
+        })
     }
 
      //    totop по клику
@@ -179,6 +190,25 @@ $(document).ready(function() {
         }
     });
 
+    var processing = $('.processing'),
+        processingClose = $('.processing__button');
+    // закрытие модального по нажатию на кнопку close
+    processingClose.on('click', function () {
+        processing.removeClass('processing--visible');
+    });
+    // закрытие окна благодарности по клику вне окна
+    $(document).click(function (e) {
+        if (e.target.classList.contains('processing')) {
+            processing.removeClass('processing--visible');
+        }
+    });
+    // закрытие окна благодарности по esc
+    $(document).keydown(function (e) {
+        if (e.key === 'Escape') {
+            processing.removeClass('processing--visible');
+        }
+    });
+
     //  валидация форм
     $( "form" ).each( function() {
         $(this).validate({
@@ -243,16 +273,15 @@ $(document).ready(function() {
             },
 
             submitHandler: function(form) {
-                if ($("form").hasClass('calc__form')) {
+                if ($(form).hasClass('calc__form')) {
                     $.ajax({
                         type: "POST",
                         url: "calc.php",
                         data: $(form).serialize(),
                         success: function (response) {
                             $(form)[0].reset();
-                            modal.removeClass('modal--visible');
-                            thanks.addClass('thanks--visible');
-
+                            processing.addClass('processing--visible');
+                            ym(64664599,'reachGoal','calc'); return true;
                         },
 
                     });
@@ -265,6 +294,7 @@ $(document).ready(function() {
                             $(form)[0].reset();
                             modal.removeClass('modal--visible');
                             thanks.addClass('thanks--visible');
+                            ym(64664599,'reachGoal','form'); return true;
 
                         },
 
@@ -275,8 +305,44 @@ $(document).ready(function() {
         });
     });
 
+    $('.calc__input').bind("change keyup input click", function() {
+        if (this.value.match(/[^0-9]/g)) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        }
+    });
+
 //  маска для телефона
 
     $('[type=tel]').mask('+7 (000) 000-00-00',);
+
+//    анимация
+    var wow = new WOW(
+        {
+            boxClass:     'wow',      // animated element css class (default is wow)
+            animateClass: 'animate__animated', // animation css class (default is animated)
+            offset:       0,          // distance to the element when triggering the animation (default is 0)
+            mobile:       true,       // trigger animations on mobile devices (default is true)
+            live:         true,       // act on asynchronously loaded content (default is true)
+            callback:     function(box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: null,    // optional scroll container selector, otherwise use window,
+            resetAnimation: true,     // reset animation on end (default is true)
+        }
+    );
+    wow.init();
+
+    // скрытие to top на главном экране
+    $(window).scroll(function(){
+
+        if ($(this).scrollTop() > 150 && $(this).scrollTop() + 200 < $("html").height() - $(window).height()  ) {
+            $('.totop--scroll').fadeIn();
+        } else {
+            $('.totop--scroll').fadeOut();
+        }
+    });
+
+
 
 });
